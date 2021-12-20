@@ -23,18 +23,13 @@ export class CreateUsers1639810582055 implements MigrationInterface {
           },
 
           {
-            name: "password",
-            type: "varchar",
-          },
-
-          {
             name: "admin",
             type: "boolean",
             default: false,
           },
 
           {
-            name: "crate-at",
+            name: "create_at",
             type: "timestamp",
             default: "now()",
           },

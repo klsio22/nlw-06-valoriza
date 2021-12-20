@@ -20,13 +20,13 @@ class User {
   email: string;
 
   @Column()
-  admin: string;
+  admin: boolean;
 
   @CreateDateColumn()
-  created_at: Date;
+  create_at: Date;
 
   @UpdateDateColumn()
-  updated_at: Date;
+  update_at: Date;
 
   constructor() {
     /* 
@@ -40,5 +40,5 @@ class User {
 }
 
 // Entidade < - > ORM < - > (users)
-
+//                rRepository
 export { User };
