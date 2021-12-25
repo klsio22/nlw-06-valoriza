@@ -7,8 +7,8 @@ const creteUserController = new CreteUserController();
 
 router.post("/signup", creteUserController.handle);
 
-/* router.get("/home", (Request,response) => {
-  return response.send("Teste");
-}); */
+ router.get("/home", (Request,response) => {
+  return response.send("Teste 123");
+}); 
 
 export { router };

@@ -15,7 +15,9 @@ class CreteUserService {
       throw new Error("Email icorrect");
     }
 
-    const userAlreadyExists = await usersRepository.findOne({ email });
+    const userAlreadyExists = await usersRepository.findOne({
+      email,
+    });
 
     if (userAlreadyExists) {
       throw new Error("User alredy exists");
