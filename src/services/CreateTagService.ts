@@ -1,16 +1,30 @@
 import { getCustomRepository } from "typeorm";
 import { TagsRepositories } from "../repositories/TagsRepositories";
 
-type ITagRequest = {
-  name: string;
-};
-
 class CreateTagService {
-  async execute({ name }: ITagRequest) {
+  private tagRepository: TagsRepositories
 
+  constructor(){
+    this.tagRepository = getCustomRepository(TagsRepositories);
+  }
 
+  async execute(name: string) {
+ 
+    if (!name) throw new Error("Icorrect name!");
 
-    
+    const tagAlreadyExists = await this.tagRepository.findOne({
+      name,
+    });
+
+    if (tagAlreadyExists) throw new Error("Tag alredy exists");
+      
+    const tag = this.tagRepository.create({
+      name
+    })
+
+    await this.tagRepository.save(tag);
+
+    return tag;
   }
 }
 
