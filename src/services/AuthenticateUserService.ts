@@ -34,9 +34,10 @@ class AuthenticateUserService {
       {
         email: user.email,
       },
-      "ce7f86436f1369c94c66e07e78b72b76", {
+      "ce7f86436f1369c94c66e07e78b72b76",
+      {
         subject: user.id,
-        expiresIn: "1h"
+        expiresIn: "1h",
       }
     );
 
