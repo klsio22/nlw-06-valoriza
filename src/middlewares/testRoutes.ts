@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 
 const testRoutes = (error: Error, request: Request, response: Response) => {
   if (error instanceof Error) {
