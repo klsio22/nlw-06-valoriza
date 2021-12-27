@@ -57,7 +57,7 @@ Execute o servidor com:
   - [x] Não é permitido cadastrar usuário sem email usuário
 
 - Cadastro da TAG
-   - [x] Não é permidido cadastrar tag sem nome 
+   - [x] Não é permitido cadastrar tag sem nome 
     
    - [x] Não é permitido cadastrar mais de uma tag com o mesmo nome
 
