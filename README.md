@@ -64,7 +64,7 @@ Execute o servidor com:
     
    - [x] Não é permidito cadastrar mais de uma tag com o mesmo nome
 
-   - [ ] Não é permidito cadastro por usuário que não sejam administradores
+   - [x] Não é permidito cadastro por usuário que não sejam administradores
 
 -  Cadastro de elogios
   

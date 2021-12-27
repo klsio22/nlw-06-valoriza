@@ -1,29 +1,17 @@
 import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
 import { router } from "./routes";
-
+import { testRoutes } from "./middlewares/testRoutes";
 import "./database";
+
+
 const app = express();
 
 app.use(express.json());
-app.use(router);
 
-app.use(
-  (err: Error, request: Request, response: Response, next: NextFunction) => {
-    if (err instanceof Error) {
-      return response.status(401).json({
-        error: err.message
-      })
-    }
+app.use(router)
 
-    return response.status(500).json({
-      status: "error",
-      message: "Internal Server Error",
-      
-    })
-
-  }
-);
+app.use(testRoutes);
 
 //http://localhost:3001
 app.listen(3001, () => console.log("Server is running now"));

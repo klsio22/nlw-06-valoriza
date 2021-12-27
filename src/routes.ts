@@ -1,18 +1,19 @@
 import { Router } from "express";
-import { CreteUserController } from "./Controllers/CreateUserController";
-import {CreateTagController} from "./Controllers/CreateTagController";
+import { CreateUserController } from "./Controllers/CreateUserController";
+import { CreateTagController } from "./Controllers/CreateTagController";
+import { ensureAdmin } from "./middlewares/ensureAdmin";
 
 const router = Router();
 
-const creteUserController = new CreteUserController();
+const createUserController = new CreateUserController();
 const createTagController = new CreateTagController();
 
-router.post("/signup", creteUserController.handle);
+router.post("/signup",createUserController.handle);
 
-router.post("/tags",createTagController.handle)
+router.post("/tags", ensureAdmin, createTagController.handle);
 
- router.get("/home", (Request,response) => {
+router.get("/home", (Request, response) => {
   return response.send("Teste 123");
-}); 
+});
 
 export { router };
