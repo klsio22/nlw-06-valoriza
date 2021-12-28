@@ -4,7 +4,6 @@ import { router } from "./routes";
 import { testRoutes } from "./middlewares/testRoutes";
 import "./database";
 
-
 const app = express();
 
 app.use(express.json());
