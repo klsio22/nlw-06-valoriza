@@ -65,13 +65,20 @@ Execute o servidor com:
 
 -  Cadastro de elogios
   
-   - [ ] Não é permitido um usuário cadastrar um elogio para si
+   - [x] Não é permitido um usuário cadastrar um elogio para si
    
-   - [ ] Não é permitido cadastrar elogios para usuários inválidos
+   - [x] Não é permitido cadastrar elogios para usuários inválidos
     
-   - [ ] o usuário precisa está autenticado na aplicação 
+   - [x] o usuário precisa está autenticado na aplicação 
 
 
+## ✍️ Outras referências
+
+Documentação de pacotes usados durante o projeto no notion:
+
+### 🌍 [NLW 6 - Valoriza](https://indigo-hisser-408.notion.site/Documenta-o-NLW-6-valoriza-71db286579814f2f8f89ff1aecadd9a7)
+
+### 🌍 [Modelo do banco de dados](https://whimsical.com/tables-app-SsjM5PUH216cXrgi8NDwhb)
 
 ## License
 

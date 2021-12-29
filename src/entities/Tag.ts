@@ -6,11 +6,12 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 
+import { Expose } from "class-transformer";
+
 import { v4 as uuid } from "uuid";
 
 @Entity("tags")
 class Tag {
-
   @PrimaryColumn()
   readonly id: string;
 
@@ -23,12 +24,16 @@ class Tag {
   @UpdateDateColumn()
   update_at: Date;
 
+  @Expose({ name: "nameCustum" })
+  nameCustum(): string {
+    return `#${this.name}`;
+  }
+
   constructor() {
     if (!this.id) {
       this.id = uuid();
     }
   }
-
 }
 
 export { Tag };

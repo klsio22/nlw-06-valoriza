@@ -7,12 +7,12 @@ export class AlterUserAddPassword1640614690413 implements MigrationInterface {
       new TableColumn({
         name: "password",
         type: "varchar",
-        isNullable:true,
+        isNullable: true,
       })
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropColumn("users","password")
-}
+    await queryRunner.dropColumn("users", "password");
+  }
 }
