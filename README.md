@@ -3,6 +3,12 @@
     NLW 6 - Valoriza
 </h1>
 
+
+<p align="center">
+  <img alt="Preview" src="./.github/preview.png">
+</p>
+
+
 ## 🚀 Tecnologias
 
 Node.js
@@ -17,6 +23,9 @@ PostgreSQL
 
 JWT -> Autenticação com json web token
 
+## 💻 Projeto
+
+Valoriza é uma plataforma para promover o reconhecimento entre companheiros de equipe.
 
 
 ## 📜 Como executar
@@ -58,7 +67,7 @@ Execute o servidor com:
 
 - Cadastro da TAG
    - [x] Não é permitido cadastrar tag sem nome 
-    
+   
    - [x] Não é permitido cadastrar mais de uma tag com o mesmo nome
 
    - [x] Não é permitido cadastro por usuário que não sejam administradores
@@ -68,7 +77,7 @@ Execute o servidor com:
    - [x] Não é permitido um usuário cadastrar um elogio para si
    
    - [x] Não é permitido cadastrar elogios para usuários inválidos
-    
+   
    - [x] o usuário precisa está autenticado na aplicação 
 
 
