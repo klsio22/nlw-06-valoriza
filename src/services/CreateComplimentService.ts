@@ -10,12 +10,12 @@ interface ICoplimentRequest {
 }
 
 class CreateComplimentService {
-  private complimentsRepositories: ComplimentsRepositories;
-  private usersRepositories: UserRepositories;
+  private complimentsRepository: ComplimentsRepositories;
+  private usersRepository: UserRepositories;
 
   constructor() {
-    this.complimentsRepositories = getCustomRepository(ComplimentsRepositories);
-    this.usersRepositories = getCustomRepository(UserRepositories);
+    this.complimentsRepository = getCustomRepository(ComplimentsRepositories);
+    this.usersRepository = getCustomRepository(UserRepositories);
   }
 
   async execute({
@@ -28,22 +28,22 @@ class CreateComplimentService {
       throw new Error("Incorrect  user receiver");
 
     //user_receiver = volor do id do usuario
-    const userReceiverExists = await this.usersRepositories.findOne(
+    const userReceiverExists = await this.usersRepository.findOne(
       user_receiver
     );
 
     if (!userReceiverExists) throw new Error("User Receiver don't exists ! ");
 
-    const complements = this.complimentsRepositories.create({
+    const complement = this.complimentsRepository.create({
       tag_id,
       user_sender,
       user_receiver,
       message,
     });
 
-    await this.complimentsRepositories.save(complements)
+    await this.complimentsRepository.save(complement);
 
-    return complements;
+    return complement;
   }
 }
 

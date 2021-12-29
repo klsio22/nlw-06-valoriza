@@ -65,11 +65,11 @@ Execute o servidor com:
 
 -  Cadastro de elogios
   
-   - [ ] Não é permitido um usuário cadastrar um elogio para si
+   - [x] Não é permitido um usuário cadastrar um elogio para si
    
-   - [ ] Não é permitido cadastrar elogios para usuários inválidos
+   - [x] Não é permitido cadastrar elogios para usuários inválidos
     
-   - [ ] o usuário precisa está autenticado na aplicação 
+   - [x] o usuário precisa está autenticado na aplicação 
 
 
 ## ✍️ Outras referências
