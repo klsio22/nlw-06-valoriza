@@ -83,7 +83,7 @@ Execute o servidor com:
 
 ## ✍️ Outras referências
 
-Documentação de pacotes usados durante o projeto no notion:
+Documentação de pacotes usados durante o projeto:
 
 ### 🌍 [NLW 6 - Valoriza](https://indigo-hisser-408.notion.site/Documenta-o-NLW-6-valoriza-71db286579814f2f8f89ff1aecadd9a7)
 
